@@ -12,8 +12,8 @@ public class DateUtil {
     public static String getDisTime(String str1, String str2) {
         str1="2018-01-01 "+str1;
         str2="2018-01-01 "+str2;
-        return getDistanceTime(str1,str2);
 
+        return getDistanceTime(str1,str2);
     }
 
     /**
@@ -49,13 +49,26 @@ public class DateUtil {
             e.printStackTrace();
         }
         //return day + "天" + hour + "小时" + min + "分" + sec + "秒";
-        return  hour + ":" + min + ":" + sec ;
+
+        String hourstr=hour+"";
+        String minstr=min+"";
+        String secstr=sec+"";
+        if(hour<10){
+            hourstr="0"+hour;
+        }
+        if(min<10){
+            minstr="0"+min;
+        }
+        if(sec<10){
+            secstr="0"+sec;
+        }
+        return  hourstr + ":" + minstr + ":" + secstr ;
     }
 
 
     public static void main(String args[]){
-        String str1="00:11:48";
-        String str2="00:13:10";
+        String str1="00:06:44";
+        String str2="01:09:04";
         String result=getDisTime(str1,str2);
         System.out.println(result);
     }

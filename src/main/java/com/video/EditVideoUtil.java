@@ -12,7 +12,7 @@ public class EditVideoUtil {
      */
     public static String editVideo4Windows(FFmpegCommandParamsForm commandParams){
         List<String> convert = new ArrayList<String>();
-        convert.add("C:\\Dev_Tools\\TestTools\\EditVideoUtil\\ffmpeg.exe"); // 添加转换工具路径
+        convert.add("C:\\Dev_Tools\\TestTools\\EditVideo\\ffmpeg.exe"); // 添加转换工具路径
         convert.add("-ss");//起始时间
         convert.add(commandParams.getStartTime());
         convert.add("-i"); // 添加参数＂-i＂，该参数指定要转换的文件

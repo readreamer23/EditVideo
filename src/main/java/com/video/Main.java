@@ -3,11 +3,12 @@ package com.video;
 public class Main {
 
     public static void main(String[] args){
-        String inFileName="C:\\Dev_Tools\\TestTools\\EditVideoUtil\\videos\\Video.mkv";
-        String outFileName="C:\\Dev_Tools\\TestTools\\EditVideoUtil\\videos\\video1"+".mkv";
-        String startTime="00:27:23";    //开始时间点
-        String endTime="00:31:04";      //结束时间点
-        String endLengthTime=DateUtil.getDisTime(startTime,endTime);
+        String inFileName="C:\\Dev_Tools\\TestTools\\EditVideo\\videos\\牧马人.mkv";
+        String outFileName="C:\\Dev_Tools\\TestTools\\EditVideo\\videos\\牧马人_"+"1"+".mkv";
+        String startTime="01:37:00";    //开始时间点
+        String endTime="01:38:20";      //结束时间点
+        String endLengthTime=DateUtil.getDisTime(startTime,endTime);  //截取视频总时长
+        System.out.println("----endLengthTime="+endLengthTime);
         FFmpegCommandParamsForm paramsForm=new FFmpegCommandParamsForm();
         paramsForm.setInfileName(inFileName);
         paramsForm.setOutfileName(outFileName);
